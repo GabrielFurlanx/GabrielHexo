@@ -9,16 +9,16 @@
   <meta name="description" content="O Bubble Sort (Ordenação por Bolha) é um algoritmo de ordenação que funciona trocando repetidamente de posição, os elementos adjacentes em um arranjo que estão fora de ordem entre si. O algoritmo leva">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Bubble Sort">
-<meta property="og:url" content="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/04/Bubble/index.html">
+<meta property="og:url" content="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/11/imagemBubble/index.html">
 <meta property="og:site_name" content="Ordenação e Busca Binária">
 <meta property="og:description" content="O Bubble Sort (Ordenação por Bolha) é um algoritmo de ordenação que funciona trocando repetidamente de posição, os elementos adjacentes em um arranjo que estão fora de ordem entre si. O algoritmo leva">
 <meta property="og:locale">
-<meta property="og:image" content="https://gabrielfurlanx.github.io/GabrielHexo/imagem_mat/BubbleSort.png">
-<meta property="article:published_time" content="2024-06-04T19:37:06.000Z">
-<meta property="article:modified_time" content="2024-06-11T16:28:50.702Z">
+<meta property="og:image" content="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/11/imagemBubble/BubbleSort.png">
+<meta property="article:published_time" content="2024-06-11T22:09:56.000Z">
+<meta property="article:modified_time" content="2024-06-12T00:37:14.287Z">
 <meta property="article:author" content="Gabriel Furlan Costa">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gabrielfurlanx.github.io/GabrielHexo/imagem_mat/BubbleSort.png">
+<meta name="twitter:image" content="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/11/imagemBubble/BubbleSort.png">
   
     <link rel="alternate" href="/GabrielHexo/atom.xml" title="Ordenação e Busca Binária" type="application/atom+xml">
   
@@ -73,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-Bubble" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-imagemBubble" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/GabrielHexo/2024/06/04/Bubble/" class="article-date">
-  <time class="dt-published" datetime="2024-06-04T19:37:06.000Z" itemprop="datePublished">2024-06-04</time>
+    <a href="/GabrielHexo/2024/06/11/imagemBubble/" class="article-date">
+  <time class="dt-published" datetime="2024-06-11T22:09:56.000Z" itemprop="datePublished">2024-06-11</time>
 </a>
     
   </div>
@@ -126,15 +126,15 @@
 </ul>
 
 
-<p>Abaixo está o código usado para fazer o algoritmo do Bubble Sort</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">bubbleSort</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> n = arr.<span class="property">length</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; n - i - <span class="number">1</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = arr[j];</span><br><span class="line">        arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">        arr[j + <span class="number">1</span>] = temp;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>E esse gráfico mostra o tempo para determinados tamanhos de entrada de dados</p>
-<p><img src="/GabrielHexo/./imagem_mat/BubbleSort.png" alt="bubblesort imagem"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">bubbleSort</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> n = arr.<span class="property">length</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; n - i - <span class="number">1</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = arr[j];</span><br><span class="line">        arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">        arr[j + <span class="number">1</span>] = temp;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+
+<p>O gráfico abaixo mostra o tempo do algoritmo, mostra a entrada de dados por tempo decorrido.</p>
+<img src="/GabrielHexo/2024/06/11/imagemBubble/BubbleSort.png" class="">
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/04/Bubble/" data-id="clx0sy947000018umbpsh1jwy" data-title="Bubble Sort" class="article-share-link"><span class="fa fa-share">Compartilhar</span></a>
+      <a data-url="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/11/imagemBubble/" data-id="clxaybnz00000hcum7xxu22pr" data-title="Bubble Sort" class="article-share-link"><span class="fa fa-share">Compartilhar</span></a>
       
       
       
@@ -144,7 +144,7 @@
     
 <nav id="article-nav">
   
-    <a href="/GabrielHexo/2024/06/04/Head/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/GabrielHexo/2024/06/11/Comeco/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Mais Recente</strong>
       <div class="article-nav-title">
         
@@ -154,7 +154,7 @@
     </a>
   
   
-    <a href="/GabrielHexo/2024/06/04/Selection/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/GabrielHexo/2024/06/11/imagemSelection/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Mais Antigo</strong>
       <div class="article-nav-title">Selection Sort</div>
     </a>
@@ -194,23 +194,23 @@
       <ul>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Head/">O que são algoritmos de ordenação e busca binária?</a>
+            <a href="/GabrielHexo/2024/06/11/Comeco/">O que são algoritmos de ordenação e busca binária?</a>
           </li>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Bubble/">Bubble Sort</a>
+            <a href="/GabrielHexo/2024/06/11/imagemBubble/">Bubble Sort</a>
           </li>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Selection/">Selection Sort</a>
+            <a href="/GabrielHexo/2024/06/11/imagemSelection/">Selection Sort</a>
           </li>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Quick/">Quick Sort</a>
+            <a href="/GabrielHexo/2024/06/11/imagemQuick/">Quick Sort</a>
           </li>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Merge/">Merge Sort</a>
+            <a href="/GabrielHexo/2024/06/11/imagemMerge/">Merge Sort</a>
           </li>
         
       </ul>

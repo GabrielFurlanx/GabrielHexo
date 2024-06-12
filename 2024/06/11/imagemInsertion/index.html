@@ -9,16 +9,16 @@
   <meta name="description" content="O Insertion Sort (Ordenação por Inserção) é um algoritmo de ordenação que funciona de forma similar ao modo como algumas pessoas ordenam cartas de um baralho, quando estão jogando. Ao adicionar uma no">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Insertion Sort">
-<meta property="og:url" content="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/04/Insertion/index.html">
+<meta property="og:url" content="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/11/imagemInsertion/index.html">
 <meta property="og:site_name" content="Ordenação e Busca Binária">
 <meta property="og:description" content="O Insertion Sort (Ordenação por Inserção) é um algoritmo de ordenação que funciona de forma similar ao modo como algumas pessoas ordenam cartas de um baralho, quando estão jogando. Ao adicionar uma no">
 <meta property="og:locale">
-<meta property="og:image" content="https://gabrielfurlanx.github.io/public/css/images/GraficoOrdenacao.jpg">
-<meta property="article:published_time" content="2024-06-04T19:29:44.000Z">
-<meta property="article:modified_time" content="2024-06-04T23:20:43.664Z">
+<meta property="og:image" content="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/11/imagemInsertion/InsertionSort.png">
+<meta property="article:published_time" content="2024-06-11T22:09:52.000Z">
+<meta property="article:modified_time" content="2024-06-12T00:38:49.194Z">
 <meta property="article:author" content="Gabriel Furlan Costa">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gabrielfurlanx.github.io/public/css/images/GraficoOrdenacao.jpg">
+<meta name="twitter:image" content="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/11/imagemInsertion/InsertionSort.png">
   
     <link rel="alternate" href="/GabrielHexo/atom.xml" title="Ordenação e Busca Binária" type="application/atom+xml">
   
@@ -73,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-Insertion" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-imagemInsertion" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/GabrielHexo/2024/06/04/Insertion/" class="article-date">
-  <time class="dt-published" datetime="2024-06-04T19:29:44.000Z" itemprop="datePublished">2024-06-04</time>
+    <a href="/GabrielHexo/2024/06/11/imagemInsertion/" class="article-date">
+  <time class="dt-published" datetime="2024-06-11T22:09:52.000Z" itemprop="datePublished">2024-06-11</time>
 </a>
     
   </div>
@@ -132,16 +132,15 @@
 </ul>
 
 
-<p>Abaixo esta o código para fazer o algoritmo Bubble Sort:</p>
+<p>Abaixo esta o código para fazer o algoritmo Insertion Sort:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">insertionSort</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> n = arr.<span class="property">length</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> key = arr[i];</span><br><span class="line">    <span class="keyword">let</span> j = i - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; arr[j] &gt; key) &#123;</span><br><span class="line">      arr[j + <span class="number">1</span>] = arr[j];</span><br><span class="line">      j = j - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    arr[j + <span class="number">1</span>] = key;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>O gráfico abaixo mostra o tempo de cada algoritmo de orderanção.</p>
-<p><img src="/GabrielHexo/../../public/css/images/GraficoOrdenacao.jpg" alt="Gráfico dos algoritmos de Ordenação: Tamanho da entrada x Tempo em segundos"></p>
-
+<p>O gráfico abaixo mostra o tempo do algoritmo, mostra a entrada de dados por tempo decorrido.</p>
+<img src="/GabrielHexo/2024/06/11/imagemInsertion/InsertionSort.png" class="">
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/04/Insertion/" data-id="clx0sy94i000218um0orx7dbx" data-title="Insertion Sort" class="article-share-link"><span class="fa fa-share">Compartilhar</span></a>
+      <a data-url="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/11/imagemInsertion/" data-id="clxayexzv0000swum2il37dfe" data-title="Insertion Sort" class="article-share-link"><span class="fa fa-share">Compartilhar</span></a>
       
       
       
@@ -151,7 +150,7 @@
     
 <nav id="article-nav">
   
-    <a href="/GabrielHexo/2024/06/04/Merge/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/GabrielHexo/2024/06/11/imagemMerge/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Mais Recente</strong>
       <div class="article-nav-title">
         
@@ -161,7 +160,7 @@
     </a>
   
   
-    <a href="/GabrielHexo/2024/06/04/binaria/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/GabrielHexo/2024/06/04/binaria-texto/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Mais Antigo</strong>
       <div class="article-nav-title">Busca Binária</div>
     </a>
@@ -201,23 +200,23 @@
       <ul>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Head/">O que são algoritmos de ordenação e busca binária?</a>
+            <a href="/GabrielHexo/2024/06/11/Comeco/">O que são algoritmos de ordenação e busca binária?</a>
           </li>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Bubble/">Bubble Sort</a>
+            <a href="/GabrielHexo/2024/06/11/imagemBubble/">Bubble Sort</a>
           </li>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Selection/">Selection Sort</a>
+            <a href="/GabrielHexo/2024/06/11/imagemSelection/">Selection Sort</a>
           </li>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Quick/">Quick Sort</a>
+            <a href="/GabrielHexo/2024/06/11/imagemQuick/">Quick Sort</a>
           </li>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Merge/">Merge Sort</a>
+            <a href="/GabrielHexo/2024/06/11/imagemMerge/">Merge Sort</a>
           </li>
         
       </ul>

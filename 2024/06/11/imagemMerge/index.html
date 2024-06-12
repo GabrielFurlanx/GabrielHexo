@@ -9,14 +9,16 @@
   <meta name="description" content="O Merge Sort (Ordenação por Mesclagem) é um algoritmo de ordenação por comparação criado por John von Neumann em 1945. O algoritmo funciona dividindo a coleção de elementos em duas sub-coleções, orden">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Merge Sort">
-<meta property="og:url" content="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/04/Merge/index.html">
+<meta property="og:url" content="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/11/imagemMerge/index.html">
 <meta property="og:site_name" content="Ordenação e Busca Binária">
 <meta property="og:description" content="O Merge Sort (Ordenação por Mesclagem) é um algoritmo de ordenação por comparação criado por John von Neumann em 1945. O algoritmo funciona dividindo a coleção de elementos em duas sub-coleções, orden">
 <meta property="og:locale">
-<meta property="article:published_time" content="2024-06-04T19:35:10.000Z">
-<meta property="article:modified_time" content="2024-06-04T22:01:40.229Z">
+<meta property="og:image" content="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/11/imagemMerge/MergeSort.png">
+<meta property="article:published_time" content="2024-06-11T22:09:53.000Z">
+<meta property="article:modified_time" content="2024-06-12T00:38:43.968Z">
 <meta property="article:author" content="Gabriel Furlan Costa">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/11/imagemMerge/MergeSort.png">
   
     <link rel="alternate" href="/GabrielHexo/atom.xml" title="Ordenação e Busca Binária" type="application/atom+xml">
   
@@ -71,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-Merge" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-imagemMerge" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/GabrielHexo/2024/06/04/Merge/" class="article-date">
-  <time class="dt-published" datetime="2024-06-04T19:35:10.000Z" itemprop="datePublished">2024-06-04</time>
+    <a href="/GabrielHexo/2024/06/11/imagemMerge/" class="article-date">
+  <time class="dt-published" datetime="2024-06-11T22:09:53.000Z" itemprop="datePublished">2024-06-11</time>
 </a>
     
   </div>
@@ -122,42 +124,14 @@
 
 
 <p>Abaixo está o código usado para fazer o algoritmo do Merge Sort</p>
-<pre><code class="javascript">
-function mergeSort(arr) &#123;
-  if (arr.length &lt;= 1) &#123;
-    return arr;
-  &#125;
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">mergeSort</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> middle = <span class="title class_">Math</span>.<span class="title function_">floor</span>(arr.<span class="property">length</span> / <span class="number">2</span>);</span><br><span class="line">  <span class="keyword">const</span> left = arr.<span class="title function_">slice</span>(<span class="number">0</span>, middle);</span><br><span class="line">  <span class="keyword">const</span> right = arr.<span class="title function_">slice</span>(middle);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">merge</span>(<span class="title function_">mergeSort</span>(left), <span class="title function_">mergeSort</span>(right));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">merge</span>(<span class="params">left, right</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> result = [];</span><br><span class="line">  <span class="keyword">let</span> leftIndex = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> rightIndex = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (leftIndex &lt; left.<span class="property">length</span> &amp;&amp; rightIndex &lt; right.<span class="property">length</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (left[leftIndex] &lt; right[rightIndex]) &#123;</span><br><span class="line">      result.<span class="title function_">push</span>(left[leftIndex]);</span><br><span class="line">      leftIndex++;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      result.<span class="title function_">push</span>(right[rightIndex]);</span><br><span class="line">      rightIndex++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> result.<span class="title function_">concat</span>(left.<span class="title function_">slice</span>(leftIndex)).<span class="title function_">concat</span>(right.<span class="title function_">slice</span>(rightIndex));</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-  const middle = Math.floor(arr.length / 2);
-  const left = arr.slice(0, middle);
-  const right = arr.slice(middle);
-
-  return merge(mergeSort(left), mergeSort(right));
-&#125;
-
-function merge(left, right) &#123;
-  let result = [];
-  let leftIndex = 0;
-  let rightIndex = 0;
-
-  while (leftIndex &lt; left.length &amp;&amp; rightIndex &lt; right.length) &#123;
-    if (left[leftIndex] &lt; right[rightIndex]) &#123;
-      result.push(left[leftIndex]);
-      leftIndex++;
-    &#125; else &#123;
-      result.push(right[rightIndex]);
-      rightIndex++;
-    &#125;
-  &#125;
-
-  return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
-&#125;
-</code></pre>
-
+<p>O gráfico abaixo mostra o tempo do algoritmo, mostra a entrada de dados por tempo decorrido.</p>
+<img src="/GabrielHexo/2024/06/11/imagemMerge/MergeSort.png" class="">
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/04/Merge/" data-id="clx0sy94j000318umdd3472lc" data-title="Merge Sort" class="article-share-link"><span class="fa fa-share">Compartilhar</span></a>
+      <a data-url="https://gabrielfurlanx.github.io/GabrielHexo/2024/06/11/imagemMerge/" data-id="clxaylogg0000hkum5s5h4k7q" data-title="Merge Sort" class="article-share-link"><span class="fa fa-share">Compartilhar</span></a>
       
       
       
@@ -167,7 +141,7 @@ function merge(left, right) &#123;
     
 <nav id="article-nav">
   
-    <a href="/GabrielHexo/2024/06/04/Quick/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/GabrielHexo/2024/06/11/imagemQuick/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Mais Recente</strong>
       <div class="article-nav-title">
         
@@ -177,7 +151,7 @@ function merge(left, right) &#123;
     </a>
   
   
-    <a href="/GabrielHexo/2024/06/04/Insertion/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/GabrielHexo/2024/06/11/imagemInsertion/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Mais Antigo</strong>
       <div class="article-nav-title">Insertion Sort</div>
     </a>
@@ -217,23 +191,23 @@ function merge(left, right) &#123;
       <ul>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Head/">O que são algoritmos de ordenação e busca binária?</a>
+            <a href="/GabrielHexo/2024/06/11/Comeco/">O que são algoritmos de ordenação e busca binária?</a>
           </li>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Bubble/">Bubble Sort</a>
+            <a href="/GabrielHexo/2024/06/11/imagemBubble/">Bubble Sort</a>
           </li>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Selection/">Selection Sort</a>
+            <a href="/GabrielHexo/2024/06/11/imagemSelection/">Selection Sort</a>
           </li>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Quick/">Quick Sort</a>
+            <a href="/GabrielHexo/2024/06/11/imagemQuick/">Quick Sort</a>
           </li>
         
           <li>
-            <a href="/GabrielHexo/2024/06/04/Merge/">Merge Sort</a>
+            <a href="/GabrielHexo/2024/06/11/imagemMerge/">Merge Sort</a>
           </li>
         
       </ul>
